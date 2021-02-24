@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\KZW.DAL\KZW.DAL.csproj" />
+    <ProjectReference Include="..\KZW.IPort\KZW.IPort.csproj" />
+    <ProjectReference Include="..\KZW.Model\KZW.Model.csproj" />
+  </ItemGroup>
+
+</Project>

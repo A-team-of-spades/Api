@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="New\zy\" />
+    <Folder Include="New\ls\" />
+    <Folder Include="New\lj\" />
+    <Folder Include="New\zxr\" />
+    <Folder Include="New\jyx\" />
+  </ItemGroup>
+
+</Project>
