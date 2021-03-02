@@ -7,6 +7,9 @@ namespace KZW.IPort
 {
     public interface IShopping
     {
-       
+        List<SelAll> GetShopping(string num);
+        List<CommPic> GetPics(string num);
+        int AddInform(Information In);
+        int EditInform(int type, int id);
     }
 }
