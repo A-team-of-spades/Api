@@ -7,13 +7,11 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 
-namespace Purchase_Sell_Stock.DAL.GetDBHelper
+namespace KZW.DAL.DB
 {
     public class DapperDBHelper
     {
-
-        static string locastr = "Data Source=DESKTOP-LV28F16;Initial Catalog=KuZhuang;Integrated Security=True;User ID=sa;Password=203713.";
-
+        static string locastr = "Data Source=10.3.196.30;Initial Catalog=KuZhuang;Integrated Security=True;User ID=sa;Password=203713;Trusted_Connection=False";
 
         /// <summary>
         /// sql语句 执行命令返回影响行数

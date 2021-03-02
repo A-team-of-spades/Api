@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using KZW.IPort;
 using Microsoft.Extensions.Logging;
+using KZW.Model;
 
 namespace KZW.Api.Controllers
 {
@@ -21,5 +22,7 @@ namespace KZW.Api.Controllers
         {
             _community = community;
         }
+
+    
     }
 }

@@ -27,7 +27,7 @@ namespace KZW.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
+            services.AddSwaggerGen();  //Swagger
             //配置
             services.AddSingleton<ICommunity, CommunityBLL>();  //社区
             services.AddSingleton<IGoods, GoodsBLL>();          //商品
@@ -35,8 +35,6 @@ namespace KZW.Api
             services.AddSingleton<IMember, MemberBLL>();        //登录
             services.AddSingleton<IPersonage, PersonageBLL>();  //个人
             services.AddSingleton<IShopping, ShoppingBLL>();    //购物
-
-
 
             //配置跨域处理，允许所有来源：
             services.AddCors(options =>
@@ -69,6 +67,15 @@ namespace KZW.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint($"/swagger/v1/swagger.json", "WebApi.Core V1");
+
+                //路径配置，设置为空，表示直接在根域名（localhost:8001）访问该文件,注意localhost:8001/swagger是访问不到的，去launchSettings.json把launchUrl去掉，如果你想换一个路径，直接写名字即可，比如直接写c.RoutePrefix = "doc";
+                c.RoutePrefix = "";
             });
         }
     }

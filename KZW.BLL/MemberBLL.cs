@@ -13,9 +13,6 @@ namespace KZW.BLL
         //实例化简单工厂模式
         Simple_Factory<MemberDAL> _dal = new Simple_Factory<MemberDAL>();
 
-        public List<Userinfo> Show()
-        {
-            return _dal.CreateInstance().Show();
-        }
+        
     }
 }

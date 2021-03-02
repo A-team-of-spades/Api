@@ -7,6 +7,6 @@ namespace KZW.IPort
 {
     public interface IMember
     {
-        List<Userinfo> Show();
+       
     }
 }

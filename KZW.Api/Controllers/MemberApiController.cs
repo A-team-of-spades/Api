@@ -24,12 +24,6 @@ namespace KZW.Api.Controllers
         }
 
 
-        [HttpGet]
-        [Route("/api/show")]
-        public string Show()
-        {
-            var ss = _member.Show();
-            return JsonConvert.SerializeObject(ss);
-        }
+       
     }
 }
