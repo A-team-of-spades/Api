@@ -22,6 +22,27 @@ namespace KZW.DAL
             return list;
         }
         /// <summary>
+        /// 修改购物车商品
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public int EditShopping(int sum,int id)
+        {
+            string sql = $"update Shopping set ShopSum={sum} where ShopId={id}";
+            return db.ExecuteNonQuery(sql);
+        }
+        /// <summary>
+        /// 查询购物车商品
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public List<SelAll> ChaShopping(string num,int id)
+        {
+            string sql = $"select * from Shopping a join  Commodity b on a.CommNum=b.CommNum where a.CommNum='{num}' and a.ShopId={id}";
+            List<SelAll> list = db.GetList<SelAll>(sql);
+            return list;
+        }
+        /// <summary>
         /// 获取商品上的图片
         /// </summary>
         /// <param name="num"></param>
@@ -51,6 +72,13 @@ namespace KZW.DAL
         {
             string sql = $"update Information set InforType='{type}' where InforId={id}";
             return db.ExecuteNonQuery(sql);
+        }
+
+        public List<Addres> GetAddres()
+        {
+            string sql = "select * from Addres";
+            List<Addres> list = db.GetList<Addres>(sql);
+            return list;
         }
     }
 }

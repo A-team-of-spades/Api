@@ -15,10 +15,23 @@ namespace KZW.BLL
         {
             return _dal.CreateInstance().AddInform(In);
         }
-
+        public List<SelAll> ChaShopping(string num, int id)
+        {
+            return _dal.CreateInstance().ChaShopping(num, id);
+        }
         public int EditInform(int type, int id)
         {
             return _dal.CreateInstance().EditInform(type, id);
+        }
+
+        public int EditShopping(int sum, int id)
+        {
+            return _dal.CreateInstance().EditShopping(sum, id);
+        }
+
+        public List<Addres> GetAddres()
+        {
+            return _dal.CreateInstance().GetAddres();
         }
 
         public List<CommPic> GetPics(string num)

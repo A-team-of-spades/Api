@@ -29,19 +29,43 @@ namespace KZW.Api.Controllers
             var ss = _shopping.GetPics(num);
             return JsonConvert.SerializeObject(ss);
         }
-        [HttpGet]
+        [HttpPost]
         [Route("/api/AddInform/{In}")]
         public int AddInform(Information In)
         {
             var ss = _shopping.AddInform(In);
             return ss;
         }
-        [HttpGet]
+        [HttpPost]
         [Route("/api/EditInform/{type}/{id}")]
         public int EditInform(int type, int id)
         {
             var ss = _shopping.EditInform(type, id);
             return ss;
         }
+        [HttpGet]
+        [Route("/api/ChaShopping/{num}/{id}")]
+        public List<SelAll> ChaShopping(string num, int id)
+        {
+            var ss = _shopping.ChaShopping(num, id);
+            return ss;
+        }
+        [HttpGet]
+        [Route("/api/GetAddres")]
+        public List<Addres> GetAddres()
+        {
+            var ss = _shopping.GetAddres();
+            return ss;
+        }
+        [HttpPost]
+        [Route("/api/EditShopping/{sum}/{id}")]
+        public int EditShopping(int sum, int id)
+        {
+            var ss = _shopping.EditShopping(sum, id);
+            return ss;
+        }
+       
+        
+        
     }
 }
