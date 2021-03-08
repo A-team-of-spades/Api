@@ -12,10 +12,24 @@ namespace KZW.DAL
     {
         DapperDBHelper _db = new DapperDBHelper();
 
-        //查询优惠券
-        public List<Discounts> GetDiscounts()
+        //查询优惠券1
+        public List<Discounts> GetDiscounts1()
         {
-            string sql = "select * from Discounts";
+            string sql = "select * from Discounts where DisId=1";
+            return _db.GetList<Discounts>(sql);
+        }
+
+        //查询优惠券2
+        public List<Discounts> GetDiscounts2()
+        {
+            string sql = "select * from Discounts where DisId=2";
+            return _db.GetList<Discounts>(sql);
+        }
+
+        //查询优惠券3
+        public List<Discounts> GetDiscounts3()
+        {
+            string sql = "select * from Discounts where DisId=3";
             return _db.GetList<Discounts>(sql);
         }
 

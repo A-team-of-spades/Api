@@ -8,8 +8,12 @@ namespace KZW.IPort
 {
     public interface IGoods
     {
-        //查询优惠券
-        List<Discounts> GetDiscounts();
+        //查询优惠券1
+        List<Discounts> GetDiscounts1();
+        //查询优惠券2
+        List<Discounts> GetDiscounts2();
+        //查询优惠券3
+        List<Discounts> GetDiscounts3();
         //查询商品
         List<GoodsAllModel> GetGoods();
         //查询商品详情

@@ -13,9 +13,19 @@ namespace KZW.BLL
         //实例化简单工厂模式
         Simple_Factory<GoodsDAL> _factory = new Simple_Factory<GoodsDAL>();
 
-        public List<Discounts> GetDiscounts()
+        public List<Discounts> GetDiscounts1()
         {
-            return _factory.CreateInstance().GetDiscounts();
+            return _factory.CreateInstance().GetDiscounts1();
+        }
+
+        public List<Discounts> GetDiscounts2()
+        {
+            return _factory.CreateInstance().GetDiscounts2();
+        }
+
+        public List<Discounts> GetDiscounts3()
+        {
+            return _factory.CreateInstance().GetDiscounts3();
         }
 
         public List<GoodsAllModel> GetGoods()

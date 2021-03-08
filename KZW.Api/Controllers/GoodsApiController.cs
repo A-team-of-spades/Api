@@ -25,11 +25,25 @@ namespace KZW.Api.Controllers
         }
 
         
-        [Route("/api/GetDiscounts")]
+        [Route("/api/GetDiscounts1")]
         [HttpGet]
-        public string GetDiscounts()
+        public string GetDiscounts1()
         {
-            return JsonConvert.SerializeObject(_goods.GetDiscounts());
+            return JsonConvert.SerializeObject(_goods.GetDiscounts1());
+        }
+
+        [Route("/api/GetDiscounts2")]
+        [HttpGet]
+        public string GetDiscounts2()
+        {
+            return JsonConvert.SerializeObject(_goods.GetDiscounts2());
+        }
+
+        [Route("/api/GetDiscounts3")]
+        [HttpGet]
+        public string GetDiscounts3()
+        {
+            return JsonConvert.SerializeObject(_goods.GetDiscounts3());
         }
 
         [Route("/api/GetGoods")]
